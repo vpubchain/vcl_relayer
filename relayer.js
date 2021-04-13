@@ -55,7 +55,10 @@ console.log("Running V1.0.23 version of the Syscoin relay logger! This tool push
 
 /* Initialize Geth Web3 */
 // var geth_ws_url = "ws://127.0.0.1:" + ethwsport;
-var geth_ws_url = "wss://rinkeby.infura.io/ws/v3/6d014b1c22c6418fbe11e78e3097fe1b";
+// var geth_ws_url = "wss://rinkeby.infura.io/ws/v3/6d014b1c22c6418fbe11e78e3097fe1b";
+
+//for test
+var geth_ws_url = "ws://161.189.170.145:" + ethwsport;
 
 var web3 = new Web3(geth_ws_url);
 var subscriptionSync = null;
@@ -84,6 +87,14 @@ var client = new ethcoin.Client({
     host: 'rinkeby.infura.io',
     port: 443,
     path: 'v3/6d014b1c22c6418fbe11e78e3097fe1b'
+  });
+
+//for test
+var client = new ethcoin.Client({
+    host: 'http://161.189.170.145',
+    port: ethrpcport,
+    user: '',
+    pass: ''
   });
 
 var getter = new Getter(client);
