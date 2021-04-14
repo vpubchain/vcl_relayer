@@ -83,7 +83,7 @@ var missingBlockChunkSize = 5000;
 var client = new ethcoin.Client({
     host: 'rinkeby.infura.io',
     port: 443,
-    path: 'v3/6d014b1c22c6418fbe11e78e3097fe1b'
+    path: '/v3/:6d014b1c22c6418fbe11e78e3097fe1b'
   });
 
 var getter = new Getter(client);
